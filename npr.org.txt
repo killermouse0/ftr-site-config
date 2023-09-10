@@ -1,7 +1,7 @@
-title: //div[contains(@class, 'storytitle')]//h1
-author: //div[@aria-label="Byline"]
-body: //div[@id='primaryaudio']//*[@class='duration' or @class='download' or contains(@class, 'photo')] | //div[@id='storytext' or @id='supplementarycontent' or contains(@class, 'transcript')]
-date: //meta[@name="date"]/@content
+body: //article[contains(concat(' ',normalize-space(@class),' '),' story ')]
+title: //h1
+date: //span[contains(concat(' ',normalize-space(@class),' '),' date ')]
+author: //span[contains(concat(' ',normalize-space(@class),' '),' date ')]
 
 strip_id_or_class: enlarge_measure
 strip_id_or_class: enlarge_html
